@@ -23,7 +23,7 @@ void Device::setupNIdevice()
 	/*********************************************/
 // DAQmx Configure Code
 	this->checkForErrors(DAQmxCreateTask("", &taskHandle_AI));
-	this->checkForErrors(DAQmxCreateAIVoltageChan(taskHandle_AI, "Dev1/ai0:3", "Voltage", DAQmx_Val_Diff, -10.0, 10.0, DAQmx_Val_Volts, NULL));
+	this->checkForErrors(DAQmxCreateAIVoltageChan(taskHandle_AI, "Dev3/ai0:3", "Voltage", DAQmx_Val_Diff, -10.0, 10.0, DAQmx_Val_Volts, NULL));
 	this->checkForErrors(DAQmxSetSampTimingType(taskHandle_AI, DAQmx_Val_OnDemand));
 	/*********************************************/
 	// DAQmx Start Code
